@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Marvel Web Service</string>
+    <string name="plano_de_fundo_tela_inicial">Plano de fundo - Tela inicial</string>
+    <string name="logo_da_marvel">Logo da Marvel</string>
 </resources>
