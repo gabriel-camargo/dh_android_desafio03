@@ -8,11 +8,11 @@
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_height="@dimen/login_card_height"
+        android:layout_marginStart="@dimen/xl_margin"
+        android:layout_marginEnd="@dimen/xl_margin"
         app:cardBackgroundColor="?attr/colorPrimary"
-        app:cardCornerRadius="16dp"
+        app:cardCornerRadius="@dimen/corner_radius_card"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,9 +26,9 @@
                 android:id="@+id/txtWelcome_loginActivity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingVertical="16dp"
+                android:paddingVertical="@dimen/title_padding"
                 android:text="@string/welcome_to_the_marvel_hq_s"
-                android:textSize="22sp"
+                android:textSize="@dimen/text_title_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -36,22 +36,22 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:cardCornerRadius="16dp"
+                android:layout_height="@dimen/no_dp"
+                app:cardCornerRadius="@dimen/corner_radius_card"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txtWelcome_loginActivity">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="8dp">
+                    android:padding="@dimen/sm_padding">
 
                     <com.google.android.material.textfield.TextInputLayout
                         android:id="@+id/edtEmail_loginActivity"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/sm_margin"
                         android:hint="@string/email"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +69,7 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/sm_margin"
                         android:hint="@string/password"
                         app:endIconMode="password_toggle"
                         app:layout_constraintEnd_toEndOf="parent"
