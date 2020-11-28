@@ -2,4 +2,19 @@
     <string name="app_name">Marvel Web Service</string>
     <string name="plano_de_fundo_tela_inicial">Plano de fundo - Tela inicial</string>
     <string name="logo_da_marvel">Logo da Marvel</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="welcome_to_the_marvel_hq_s">Welcome to the Marvel HQs</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="remember">Remember</string>
+    <string name="log_in">Log In</string>
+    <string name="create_account">Create Account</string>
 </resources>
