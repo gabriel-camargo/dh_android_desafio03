@@ -15,4 +15,5 @@
     <dimen name="margin_comic_photo">4dp</dimen>
     <dimen name="text_size_comic">18sp</dimen>
     <dimen name="margintop_comic_text">6dp</dimen>
+    <dimen name="folder_comic_details_height">240dp</dimen>
 </resources>

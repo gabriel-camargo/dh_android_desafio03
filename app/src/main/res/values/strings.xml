@@ -23,4 +23,9 @@
     <string name="name">Name</string>
     <string name="foto_da_comic">Foto da comic</string>
     <string name="marvel">Marvel</string>
+    <string name="folder_comic_details">Folder - Comic details</string>
+    <string name="published">Published</string>
+    <string name="price">Price</string>
+    <string name="pages">Pages</string>
+    <string name="back_button">Back Button</string>
 </resources>

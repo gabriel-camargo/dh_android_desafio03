@@ -1,5 +1,6 @@
 package com.gabrielcamargo.marvelwebservice.comic.view
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import com.gabrielcamargo.marvelwebservice.R
 import com.gabrielcamargo.marvelwebservice.comic.model.ComicModel
 import com.gabrielcamargo.marvelwebservice.comic.repository.ComicRepository
 import com.gabrielcamargo.marvelwebservice.comic.viewmodel.ComicViewModel
+import com.gabrielcamargo.marvelwebservice.comicdetails.view.ComicDetailsActivity
 
 class ComicFragment : Fragment() {
 
@@ -51,7 +53,8 @@ class ComicFragment : Fragment() {
         val viewManager = GridLayoutManager(_myView.context, 3)
         val recyclerView = _myView.findViewById<RecyclerView>(R.id.recyclerView_comicFragment)
         val viewAdapter = ComicAdapter(comics) {
-            Toast.makeText(_myView.context, it.numberEdition, Toast.LENGTH_SHORT).show()
+            val intent = Intent(activity, ComicDetailsActivity::class.java)
+            startActivity(intent)
         }
 
         recyclerView.apply {
