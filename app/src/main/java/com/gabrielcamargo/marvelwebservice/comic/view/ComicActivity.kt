@@ -8,7 +8,7 @@ class ComicActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.comic_activity)
+        setContentView(R.layout.activity_comic)
 
         supportActionBar?.title = getString(R.string.marvel);
 
