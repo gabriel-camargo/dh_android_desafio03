@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.activity.addCallback
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -27,6 +28,7 @@ class ComicDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _myView =  inflater.inflate(R.layout.fragment_comic_details, container, false)
+
         return _myView
     }
 
@@ -39,7 +41,11 @@ class ComicDetailsFragment : Fragment() {
 
         val btnBack = _myView.findViewById<ImageView>(R.id.backButton_comicDetailsFragment)
         btnBack.setOnClickListener{
-            activity?.onBackPressed()
+            activity?.finish()
+        }
+
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            activity?.finish()
         }
 
         val imgComicFolder = _myView.findViewById<ImageView>(R.id.imgComic_comicDetailsFragment)
