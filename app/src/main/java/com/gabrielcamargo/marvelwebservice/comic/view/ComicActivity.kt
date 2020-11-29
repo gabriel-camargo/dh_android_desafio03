@@ -9,6 +9,9 @@ class ComicActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.comic_activity)
+
+        supportActionBar?.title = getString(R.string.marvel);
+
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
                 .replace(R.id.container, ComicFragment.newInstance())
