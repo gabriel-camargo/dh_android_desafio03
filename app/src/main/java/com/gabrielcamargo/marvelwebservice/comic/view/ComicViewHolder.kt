@@ -1,5 +1,6 @@
 package com.gabrielcamargo.marvelwebservice.comic.view
 
+import android.provider.Settings.Global.getString
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -18,11 +19,14 @@ class ComicViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
     fun bind(comic: ComicModel) {
         Glide.with(context)
-            .load(comic.img)
+            .load(comic.img.path + "." + comic.img.extension)
             .transform(CenterCrop())
             .transition(DrawableTransitionOptions.withCrossFade())
             .into(imgComic)
 
-        txtEdition.text = comic.numberEdition
+        val issueNumberString = "#" + comic.numEdicao
+        txtEdition.text = issueNumberString
+
     }
+
 }

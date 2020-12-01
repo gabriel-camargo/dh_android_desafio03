@@ -1,20 +1,12 @@
 package com.gabrielcamargo.marvelwebservice.comic.repository
 
 import android.content.Context
-import com.gabrielcamargo.marvelwebservice.R
-import com.gabrielcamargo.marvelwebservice.comic.model.ComicModel
+import com.gabrielcamargo.marvelwebservice.data.api.NetworkUtils.Companion.PUBLIC_KEY_MARVEL
+import com.gabrielcamargo.marvelwebservice.data.api.NetworkUtils.Companion.getHash
+import com.gabrielcamargo.marvelwebservice.extensions.ExtensionMarvelApi.Companion.getTimeStamp
 
 class ComicRepository(private val context: Context) {
-    fun getComics(callback: (comics: MutableList<ComicModel>) -> Unit) {
-        callback.invoke(
-            mutableListOf<ComicModel>(
-                ComicModel(R.drawable.splashscreen, "#99"),
-                ComicModel(R.drawable.splashscreen, "#98"),
-                ComicModel(R.drawable.splashscreen, "#97"),
-                ComicModel(R.drawable.splashscreen, "#96"),
-                ComicModel(R.drawable.splashscreen, "#95"),
-                ComicModel(R.drawable.splashscreen, "#94"),
-            )
-        )
-    }
+    private val client = ComicEndpoint.endpoint
+
+    suspend fun getComics() = client.get(getTimeStamp(), getHash(), PUBLIC_KEY_MARVEL)
 }

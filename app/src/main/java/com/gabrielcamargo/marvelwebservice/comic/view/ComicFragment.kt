@@ -41,11 +41,15 @@ class ComicFragment : Fragment() {
             ComicViewModel.ComicViewModelFactory(ComicRepository(_myView.context))
         ).get(ComicViewModel::class.java)
 
-        _viewModel.comics.observe(viewLifecycleOwner, Observer {
+//        _viewModel.comics.observe(viewLifecycleOwner, Observer {
+//            createList(it)
+//        })
+//
+//        _viewModel.getComics()
+
+        _viewModel.getComics().observe(viewLifecycleOwner, {
             createList(it)
         })
-
-        _viewModel.getComics()
     }
 
     private fun createList(comics: List<ComicModel>) {
