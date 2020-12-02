@@ -18,11 +18,14 @@ class ComicViewHolder(view: View): RecyclerView.ViewHolder(view) {
     private val context = view.context
 
     fun bind(comic: ComicModel) {
-        Glide.with(context)
-            .load(comic.img.path + "." + comic.img.extension)
-            .transform(CenterCrop())
-            .transition(DrawableTransitionOptions.withCrossFade())
-            .into(imgComic)
+        comic.img?.let{
+            Glide.with(context)
+                .load(it.path + "." + it.extension)
+                .transform(CenterCrop())
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(imgComic)
+        }
+
 
         val issueNumberString = "#" + comic.numEdicao
         txtEdition.text = issueNumberString

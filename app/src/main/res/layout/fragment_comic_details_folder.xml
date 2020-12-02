@@ -33,8 +33,7 @@
             android:layout_height="match_parent"
             android:layout_margin="@dimen/margin_comic_photo"
             android:contentDescription="@string/foto_da_comic"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splashscreen" />
+            android:scaleType="centerCrop" />
 
     </com.google.android.material.card.MaterialCardView>
 

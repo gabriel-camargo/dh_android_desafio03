@@ -38,14 +38,8 @@ class ComicFragment : Fragment() {
 
         _viewModel = ViewModelProvider(
             this,
-            ComicViewModel.ComicViewModelFactory(ComicRepository(_myView.context))
+            ComicViewModel.ComicViewModelFactory(ComicRepository())
         ).get(ComicViewModel::class.java)
-
-//        _viewModel.comics.observe(viewLifecycleOwner, Observer {
-//            createList(it)
-//        })
-//
-//        _viewModel.getComics()
 
         _viewModel.getComics().observe(viewLifecycleOwner, {
             createList(it)
@@ -57,6 +51,7 @@ class ComicFragment : Fragment() {
         val recyclerView = _myView.findViewById<RecyclerView>(R.id.recyclerView_comicFragment)
         val viewAdapter = ComicAdapter(comics) {
             val intent = Intent(activity, ComicDetailsActivity::class.java)
+            intent.putExtra(getString(R.string.intent_comic_id), it.id)
             startActivity(intent)
         }
 

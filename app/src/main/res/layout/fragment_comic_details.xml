@@ -43,8 +43,7 @@
             android:layout_height="match_parent"
             android:layout_margin="@dimen/margin_comic_photo"
             android:contentDescription="@string/foto_da_comic"
-            android:scaleType="centerCrop"
-            android:src="@drawable/splashscreen" />
+            android:scaleType="centerCrop" />
 
     </com.google.android.material.card.MaterialCardView>
 
@@ -59,7 +58,7 @@
             android:id="@+id/txtTitle_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Amazing Spider-Man (2014) #1 (han Variant)"
+            tools:text="Amazing Spider-Man (2014) #1 (han Variant)"
             android:textAllCaps="true"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -69,7 +68,8 @@
         <TextView
             android:id="@+id/txtDetails_comicDetailsFragment"
             android:layout_width="match_parent"
-            android:layout_height="170dp"
+            android:layout_height="wrap_content"
+            android:maxHeight="170dp"
             android:layout_marginTop="16dp"
             tools:text="@tools:sample/lorem/random"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,7 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="April 30, 2014"
+            tools:text="April 30, 2014"
             app:layout_constraintStart_toEndOf="@+id/txtPublished_comicDetailsFragment"
             app:layout_constraintTop_toTopOf="@+id/txtPublished_comicDetailsFragment" />
 
@@ -120,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="$ 5,99"
+            tools:text="$ 5,99"
             app:layout_constraintStart_toEndOf="@+id/txtPrice_comicDetailsFragment"
             app:layout_constraintTop_toTopOf="@+id/txtPrice_comicDetailsFragment" />
 
@@ -129,7 +129,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:text="38"
+            tools:text="38"
             app:layout_constraintStart_toEndOf="@+id/txtPages_comicDetailsFragment"
             app:layout_constraintTop_toTopOf="@+id/txtPages_comicDetailsFragment" />
 

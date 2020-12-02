@@ -6,9 +6,17 @@ import com.google.gson.annotations.SerializedName
 data class ComicModel(
     val id: Int,
     @SerializedName("thumbnail")
-    val img: ImageModel,
+    val img: ImageModel?,
     @SerializedName("title")
-    val titulo: String,
+    val titulo: String?,
     @SerializedName("issueNumber")
-    val numEdicao: String
+    val numEdicao: String?,
+    @SerializedName("dates")
+    val datas: List<ComicDates>?,
+    @SerializedName("prices")
+    val precos: List<ComicPrice>?,
+    @SerializedName("pageCount")
+    val paginas: Int?,
+    @SerializedName("description")
+    val descricao: String?
 )

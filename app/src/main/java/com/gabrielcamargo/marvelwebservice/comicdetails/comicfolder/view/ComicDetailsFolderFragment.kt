@@ -9,6 +9,9 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.gabrielcamargo.marvelwebservice.R
 import com.gabrielcamargo.marvelwebservice.comicdetails.comicfolder.viewmodel.ComicDetailsFolderViewModel
 
@@ -39,6 +42,16 @@ class ComicDetailsFolderFragment : Fragment() {
         val btnClose = _myView.findViewById<ImageView>(R.id.closeButton_comicDetailsFolderFragment)
         btnClose.setOnClickListener{
             _navController.navigate(R.id.comicDetailsFragment)
+        }
+
+        val imgUrl: String? = arguments?.getString(getString(R.string.img_url))
+        if(imgUrl != null) {
+            val imgView = _myView.findViewById<ImageView>(R.id.imgComic_comicDetailsFolderFragment)
+            Glide.with(_myView.context)
+                .load(imgUrl)
+                .transform(CenterCrop())
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .into(imgView)
         }
 
     }
