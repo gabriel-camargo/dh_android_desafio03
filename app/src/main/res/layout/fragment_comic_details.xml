@@ -20,9 +20,9 @@
 
     <ImageView
         android:id="@+id/backButton_comicDetailsFragment"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_margin="24dp"
+        android:layout_width="@dimen/dim_30_dp"
+        android:layout_height="@dimen/dim_30_dp"
+        android:layout_margin="@dimen/dim_24_dp"
         android:src="@drawable/ic_baseline_arrow_back_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,10 +30,10 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardview_comicDetailsFragment"
-        android:layout_width="120dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="@dimen/dim_120_dp"
+        android:layout_height="@dimen/dim_160_dp"
+        android:layout_marginStart="@dimen/dim_24_dp"
+        android:layout_marginTop="@dimen/dim_120_dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -49,8 +49,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:padding="24dp"
+        android:layout_height="@dimen/no_dp"
+        android:padding="@dimen/dim_24_dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardview_comicDetailsFragment" >
 
@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             tools:text="Amazing Spider-Man (2014) #1 (han Variant)"
             android:textAllCaps="true"
-            android:textSize="22sp"
+            android:textSize="@dimen/dimen_22_dp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -69,8 +69,8 @@
             android:id="@+id/txtDetails_comicDetailsFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="170dp"
-            android:layout_marginTop="16dp"
+            android:maxHeight="@dimen/dimen_170_dp"
+            android:layout_marginTop="@dimen/dimen_16_dp"
             tools:text="@tools:sample/lorem/random"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +80,7 @@
             android:id="@+id/txtPublished_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/dim_24_dp"
             android:text="@string/published"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -90,7 +90,7 @@
             android:id="@+id/txtPrice_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dimen_4_dp"
             android:text="@string/price"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,7 +100,7 @@
             android:id="@+id/txtPages_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dimen_4_dp"
             android:text="@string/pages"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,7 +110,7 @@
             android:id="@+id/txtPublishedValue_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
             tools:text="April 30, 2014"
             app:layout_constraintStart_toEndOf="@+id/txtPublished_comicDetailsFragment"
             app:layout_constraintTop_toTopOf="@+id/txtPublished_comicDetailsFragment" />
@@ -119,7 +119,7 @@
             android:id="@+id/txtPriceValue_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
             tools:text="$ 5,99"
             app:layout_constraintStart_toEndOf="@+id/txtPrice_comicDetailsFragment"
             app:layout_constraintTop_toTopOf="@+id/txtPrice_comicDetailsFragment" />
@@ -128,7 +128,7 @@
             android:id="@+id/txtPagesValue_comicDetailsFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="@dimen/dimen_8_dp"
             tools:text="38"
             app:layout_constraintStart_toEndOf="@+id/txtPages_comicDetailsFragment"
             app:layout_constraintTop_toTopOf="@+id/txtPages_comicDetailsFragment" />

@@ -16,4 +16,13 @@
     <dimen name="text_size_comic">18sp</dimen>
     <dimen name="margintop_comic_text">6dp</dimen>
     <dimen name="folder_comic_details_height">240dp</dimen>
+    <dimen name="dim_30_dp">30dp</dimen>
+    <dimen name="dim_24_dp">24dp</dimen>
+    <dimen name="dim_120_dp">120dp</dimen>
+    <dimen name="dim_160_dp">160dp</dimen>
+    <dimen name="dimen_22_dp">22sp</dimen>
+    <dimen name="dimen_170_dp">170dp</dimen>
+    <dimen name="dimen_16_dp">16dp</dimen>
+    <dimen name="dimen_4_dp">4dp</dimen>
+    <dimen name="dimen_8_dp">8dp</dimen>
 </resources>
